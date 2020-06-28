@@ -906,8 +906,7 @@ class MySQLtoMongo:
                 }
             },
             {
-                "$project":
-                    {
+                "$project": {
                         "_id": 0,
                         "ID": 0,
                         "salary": 0,
@@ -925,7 +924,6 @@ class MySQLtoMongo:
             {"$unwind": "$sub_course"}
         ])
 
-        ##
         finish = perf_counter()
 
         query_time = round(finish - start, 4)
